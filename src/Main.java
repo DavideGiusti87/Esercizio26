@@ -1,0 +1,26 @@
+/*
+Booleans Operators 04
+Exercise: Boolean Operators 4
+Try to solve on paper the following boolean algebra operations:
+
+[A]: considering that a=1, b=3, c=a*b, d=c: (d / c + 2) >= b || !(c + b - c / a == 3)
+[B]: considering that x=5, y=6, t=false and f=true: (x * x - y * y / 2 != 12) || !t && f
+Then compare your solutions with a Java program that tests the validity of your assumptions.
+ */
+public class Main {
+    public static void main(String[] args) {
+
+        /* [A]: considering that a=1, b=3, c=a*b, d=c: (d / c + 2) >= b || !(c + b - c / a == 3) =
+        * = 3 >= 3 || !(true) =
+        * = true || false = true */
+        int a=1, b=3, c=a*b, d=c;
+        System.out.println("[A]: considering that a=1, b=3, c=a*b, d=c: "+((d / c + 2) >= b || !(c + b - c / a == 3)));
+
+        /* [B]: considering that x=5, y=6, t=false and f=true: (x * x - y * y / 2 != 12) || !t && f =
+        *  = (4 != 12) || true && true =
+        *  = true || true = true*/
+        int x=5, y=6;
+        boolean t=false, f=true;
+        System.out.println("[B]: considering that x=5, y=6, t=false and f=true: "+((x * x - y * y / 2 != 12) || !t && f));
+    }
+}
